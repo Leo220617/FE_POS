@@ -691,19 +691,13 @@ namespace WAConectorAPI.Controllers
                     }
 
                     db.Entry(enc).State = System.Data.Entity.EntityState.Modified;
-                    // enc.totalserviciogravado = Math.Round(Detalles.Where(a => a.unidadMedida.ToLower() == "sp" && a.exonTipoDoc == null).Sum(d => d.MontoTotal), 2);
-                    //enc.totalservicioexento = Math.Round(Detalles.Where(a => a.unidadMedida.ToLower() == "sp" && a.exonTipoDoc != null).Sum(d => d.MontoTotal), 2);
-                    //enc.totalservicioexonerado = Math.Round(totalserviciosexonerado, 2);
+                  
 
                     enc.totalserviciogravado = Math.Round(totalsergravados, 2);
                     enc.totalservicioexento = Math.Round(totalservexentos, 2);
                     enc.totalservicioexonerado = Math.Round(totalserviciosexonerado, 2);
 
-
-
-                    // enc.totalmercaderiagravado = Math.Round(Detalles.Where(a => a.unidadMedida.ToLower() != "sp" && a.exonTipoDoc == null).Sum(d => d.MontoTotal), 2);
-                    //enc.totalmercaderiaexenta = Math.Round(Detalles.Where(a => a.unidadMedida.ToLower() != "sp" && a.exonTipoDoc != null).Sum(d => d.MontoTotal), 2);
-                    //enc.totalmercaderiaexonerado = Math.Round(totalmercaderiasexoneradas, 2);
+ 
 
                     enc.totalmercaderiagravado = Math.Round(totalmercaderiagravada, 2);
                     enc.totalmercaderiaexenta = Math.Round(totalmercexenta, 2);
