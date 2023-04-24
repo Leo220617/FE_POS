@@ -211,7 +211,8 @@ namespace WAConectorAPI.Controllers
                         //Generacion del nodo de receptor
                         xml.receptor = new receptor();
                         xml.receptor.nombre = enc.CardName;
-
+                        xml.receptor.correo_electronico = enc.Email;
+                        
                         if (enc.TipoIdentificacion == "EX")
                         // if(enc.LicTradNum.Length >= 12 && (enc.TipoDocumento == "09" || enc.TipoDocumento == "03" || enc.TipoDocumento == "02"))
                         {
